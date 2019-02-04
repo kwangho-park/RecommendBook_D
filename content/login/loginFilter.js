@@ -18,7 +18,7 @@ function login() {
 
 	/* login 정보 필터링을 위한 instance 생성 및 초기화 */
 	// 사용자입력 id => id.value, pw => pw.value
-	var loginFilter = createValidation(idDom.value, pwDom.value);
+	var loginFilter = createFilter(idDom.value, pwDom.value);		// 에러발생
 
 	
 

@@ -21,7 +21,7 @@
   <meta name="keywords" content = "book">
 
   <!-- 전체 영역 단위 CSS -->
-  <link href="/RecommendBook_dynamic/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
+  <link href="/RecommendBook_D/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
 
   <!-- 해당 page단위 CSS -->
   <link href="indexStyle.css" type="text/css" rel="stylesheet">
@@ -69,7 +69,7 @@
  
     <!-- home page 메인 이미지 -->
 
-    <img class = "HomeImg" src="/RecommendBook_dynamic/content/reference/img/book-sea(free_commercial).jpg" width= "1000px" height = "500px">
+    <img class = "HomeImg" src="/RecommendBook_D/content/reference/img/book-sea(free_commercial).jpg" width= "1000px" height = "500px">
 
 
   </section>
@@ -97,7 +97,7 @@
   
   <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
 
-  <script src="/RecommendBook_dynamic/content/common/menuPanel.js"></script>
+  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>
 
 
 </body>

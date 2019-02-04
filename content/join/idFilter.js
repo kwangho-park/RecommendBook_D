@@ -4,10 +4,28 @@
  * */
 
 
-/* id를 필터링하는 function */
-// session storage에 저장된 id값을 비교
-// javascript -> JSP 변경중 2019.01.30
 
+
+/* ID 중복확인 button click 시 실행되는 함수 */
+// [장기적 고민]
+// '회원가입신청' submit 버튼과 별도로 서버에서 id 중복확인을 하는 방법은??
+function idCheckEL(){
+
+	/* <input> 의 dom객체의 참조값을 반환 */
+	var idDom = document.getElementById("id");
+
+	var id = idDom.value;
+
+	if(idFilter(id)){					// ID 중복여부를 필터링하는 함수 호출
+		alert("가입이 가능한 ID 입니다!");
+	}else{
+		alert("이미 존재하는 ID 입니다.");
+	}
+} // idCheckEL()
+
+
+/* id를 필터링하는 function */
+// [장기적 고민]
 function idFilter(){
 	
 	var result = false;

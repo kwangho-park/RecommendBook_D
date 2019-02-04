@@ -11,7 +11,7 @@
 	<meta name="keywords" content = "book">
 
     <!-- 전체 영역 단위 CSS -->
-    <link href="/RecommendBook_dynamic/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
+    <link href="/RecommendBook_D/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
 
     <!-- 해당 page단위 CSS -->
     <link href="postStyle.css" type="text/css" rel="stylesheet">
@@ -122,7 +122,7 @@
   <script src="initPost.js"></script>
 
   <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
-  <script src="/RecommendBook_dynamic/content/common/menuPanel.js"></script> 
+  <script src="/RecommendBook_D/content/common/menuPanel.js"></script> 
  
   <!-- 게시글 업데이트 로직 -->
   <script src="savePosting.js"></script>

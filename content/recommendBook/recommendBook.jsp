@@ -13,7 +13,7 @@
 
   
   <!-- 전체 영역 단위 CSS : 외부파일-->
-  <link href="/RecommendBook_dynamic/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
+  <link href="/RecommendBook_D/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
 
   <!-- 해당 page단위 CSS -->
   <link href="recommendBookStyle.css" type="text/css" rel="stylesheet">
@@ -99,7 +99,7 @@
   <script src="initSearchBook.js"></script>
 	
   <!-- munuPanel의 동적 CSS -->
-  <script src="/RecommendBook_dynamic/content/common/menuPanel.js"></script>  
+  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>  
   
   <!-- 게시글을 업데이트하는 로직 -->
   <script src="printPost.js"></script>

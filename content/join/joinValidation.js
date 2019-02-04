@@ -1,7 +1,7 @@
 
 /* 회원가입 정보의 유효성(JS) 및 중복검사(JSP)  로직 */
 
-/* 필터링 정의(임시) */
+/* 유효성 검사 정의(임시) */
 /*
 id = 문자열
 password = 숫자
@@ -11,18 +11,9 @@ address = 문자열
  */
 
 
-/* join page가 웹 브라우저에 로딩될때 실행되는 메소드 (=초기화) */
-function joinEventListener() {
-
-	var idCheckBtn = document.getElementById("idCheckBtn");
-	
-	idCheckBtn.onclick = idCheckEL;
-
-} // joinEventListener()
-
-
-/* join button click 시 실행되는 함수 */
-function loginValidation() {
+/* '회원가입신청' submit click 시 실행되는 함수 */
+// 회원가입 양식의 유효성 검사
+function joinValidation() {
 	
 	/* <input> 의 dom객체의 참조값을 반환 */
 	var idDom = document.getElementById("id");
@@ -93,19 +84,4 @@ function createValidation(id, pw, name, brathday) {
 } // createFilter() END
 
 
-
-/* ID 중복확인 button click 시 실행되는 함수 */
-function idCheckEL(){
-
-	/* <input> 의 dom객체의 참조값을 반환 */
-	var idDom = document.getElementById("id");
-
-	var id = idDom.value;
-	
-	if(idFilter(id)){					// ID 중복여부를 필터링하는 함수 호출
-		alert("가입이 가능한 ID 입니다!");
-	}else{
-		alert("이미 존재하는 ID 입니다.");
-	}
-} // idCheckEL()
 

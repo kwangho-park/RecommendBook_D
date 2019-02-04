@@ -13,7 +13,7 @@
   <meta name="keywords" content = "book">
   
   <!-- 전체 영역 단위 CSS -->
-  <link href="/RecommendBook_dynamic/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
+  <link href="/RecommendBook_D/content/common/webSiteStyle.css" type="text/css" rel="stylesheet">
 
   <!-- 해당 page단위 CSS -->
   <link href="loginStyle.css" type="text/css" rel="stylesheet">
@@ -48,13 +48,17 @@
 
 
 	<article>
+		<%--
+		유효성 검사완료 후 로그인완료 페이지로 전환 (로그아웃 시 까지 유지해야함)
+		javascript 으로 쿠키에 로그인 flag 저장
 		<form action="test.html" method="post">
-		
+ 		--%>
+	 	<form>
     	<label class="loginInfo"> ID </label><input type = "text" 		id = "id" name="idPara" placeholder="문자입력">
     	<label class="loginInfo"> PW </label><input type = "password"	id = "pw" name="pwPara" placeholder="숫자입력">
 
-    	<div align="center"><input type="submit" id="loginBtn" value="로그인"></div>
-  
+	   	<div align="center"><input type="submit" id="loginBtn" value="로그인"></div>
+    
 		</form>
 	</article>
 
@@ -82,7 +86,7 @@
   <script src="initLogin.js"></script>
   
   <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
-  <script src="/RecommendBook_dynamic/content/common/menuPanel.js"></script>
+  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>
   
   <!-- login 필터링을 위한 로직 -->
   <script src="loginFilter.js"></script>

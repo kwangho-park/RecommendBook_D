@@ -1,5 +1,5 @@
 
 function initJoin() {
 	menuInit();
-	joinEventListener();
+//	joinEventListener();
 }
