@@ -67,18 +67,19 @@
 
     <!-- 회원가입 양식 -->
     <article>
-	  <form name = "joinClient" method = "post" action="test.jsp" onsubmit= "return joinValidation()">
+	  <form name = "joinClient" method = "post" action="joinFilter.jsp" onsubmit= "return joinValidation()">
 
         <h3> 양식</h3>
 
         <label class="joinInfo"> 아 이 디&nbsp; : &nbsp;</label>					<input type = "text" 		name="id"		id="id" 		placeholder="아이디를 입력해줘야겠쥬?">
         <%--<input type="button" id="idCheckBtn" value="중복확인">  --%>
-        		
+
         <label class="joinInfo"> 비밀번호 : &nbsp;</label>							<input type = "password" 	name="pw"		id="pw" 		placeholder="잊어버리면 찾을 수가 없슈!">
         <label class="joinInfo"> 이&nbsp; &nbsp; 름&nbsp; : &nbsp;</label>			<input type = "text" 		name="name"		id="name" 		placeholder="이름이 뭐쥬?">
         <label class="joinInfo"> 생년월일 : &nbsp;</label>							<input type = "date"  		name="brathday"	id="brathday" 	placeholder="챙겨주지 않을꺼 알쥬?">
         <label class="joinInfo"> 이 메 일&nbsp; : &nbsp;</label>					<input type = "email" 		name="email"	id="email" 		placeholder="이메일은 @을 넣어야겠쥬?">
         <label class="joinInfo"> 주&nbsp; &nbsp; &nbsp;소&nbsp; : &nbsp;</label>	<input type = "text" 		name="address"	id="address" 	placeholder="솔로인 여성분은 연락처 기입">
+
 
         <label class="joinInfo"> 가입경로&nbsp; : &nbsp;</label> 
         <select name = "joinProcess" size = "1"> 
