@@ -49,15 +49,7 @@
         	String name = request.getParameter("name");
         	String email = request.getParameter("email");
         	String address = request.getParameter("address");
-  
-
-        	// test 2019.02.08 삭제예정
-        	if(true){
-        		id = "admin";
-        		out.println("test");
-        	}
-        	
-        	
+ 
         	
         	String[] memberArr;
         	
@@ -73,14 +65,16 @@
 	    			// 저장된 값을 확인하기위해 전체 배열을 출력
 	    			memberArr = memberDB.getMemberArr();
 	    			
+	    			
 	    			for(int index=0 ; index<20 ; index++){
 	    				
-	    				out.println(memberArr[index]);
+	    				if( (index != 0) && (index % 5 == 0)){	
+	    					out.println("<br>");	
+	    				}
 	    				
-	    			//	if( (index != 0) && (index % 5 == 0)){	
-	    			//		out.println("<br>");	
-	    			//	}
+	    				out.println(memberArr[index]);
 	    			}
+	    			
 
 	    			
 	    			
