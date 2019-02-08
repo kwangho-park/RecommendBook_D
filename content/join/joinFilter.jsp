@@ -43,40 +43,52 @@
 
 		    // memberDB.memberArrTest();	//test setting
 
-	    	
+		    
         	String id = request.getParameter("id");
         	String pw = request.getParameter("pw");
         	String name = request.getParameter("name");
         	String email = request.getParameter("email");
         	String address = request.getParameter("address");
+  
+
+        	// test 2019.02.08 삭제예정
+        	if(true){
+        		id = "admin";
+        		out.println("test");
+        	}
+        	
+        	
         	
         	String[] memberArr;
-
+        	
+        	
 	    	if(!memberDB.isFull()){					// 최대 저장공간 필터링(4번째 아이디 존재유무 확인)
 	    		if(memberDB.idFilter(id)){			// id 중복여부
 	    			
 	    			// // id, pw, name, email, address 저장
 	    			memberDB.setMember(id,pw,name,email,address);
-	    		
 
+	    			
+	    			// ** test
+	    			// 저장된 값을 확인하기위해 전체 배열을 출력
 	    			memberArr = memberDB.getMemberArr();
 	    			
-	    			// 저장된 값을 확인하기위해 전체 배열을 출력
 	    			for(int index=0 ; index<20 ; index++){
 	    				
 	    				out.println(memberArr[index]);
 	    				
-	    				if( (index != 0) && (index % 5 == 0)){	
-	    					out.println("<br>");	
-	    				}
+	    			//	if( (index != 0) && (index % 5 == 0)){	
+	    			//		out.println("<br>");	
+	    			//	}
 	    			}
-	    			
+
 	    			
 	    			
 	    			// 회원가입완료 팝업창 
 	    			out.println("<script>alert('회원가입완료')</script>");
 	    		
-	    			// 로그인창 이동
+	    			// 로그인창 이동로직 추가예정
+	    			
 	    			
 	    		}else{
 	    			
