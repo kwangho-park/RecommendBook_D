@@ -50,12 +50,14 @@
 	<article>
 		<%--
 		유효성 검사완료 후 로그인완료 페이지로 전환 (로그아웃 시 까지 유지해야함)
-		javascript 으로 쿠키에 로그인 flag 저장
-		<form action="test.html" method="post">
+		javascript 으로 쿠키에 로그인 flag 저장 예정
  		--%>
-	 	<form>
-    	<label class="loginInfo"> ID </label><input type = "text" 		id = "id" name="idPara" placeholder="문자입력">
-    	<label class="loginInfo"> PW </label><input type = "password"	id = "pw" name="pwPara" placeholder="숫자입력">
+ 		
+		<%-- test 중 --%> 		
+ 		<form name = "loginClient" method = "post" action="loginFilter.jsp" onsubmit= "return login()">
+ 
+    	<label class="loginInfo"> ID </label><input type = "text" 		name="id" id = "id" placeholder="문자입력">
+    	<label class="loginInfo"> PW </label><input type = "password"	name="pw" id = "pw" placeholder="숫자입력">
 
 	   	<div align="center"><input type="submit" id="loginBtn" value="로그인"></div>
     
@@ -88,12 +90,15 @@
   <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
   <script src="/RecommendBook_D/content/common/menuPanel.js"></script>
   
-  <!-- login 필터링을 위한 로직 -->
-  <script src="loginFilter.js"></script>
+  <!-- 로그인 유효성 검사 로직  --> 
+  <script src="loginValidation.js"></script>
   
-  <!-- 로그인을 위한 session storage 조회 및 비교 로직-->
-  <script src="selectInfo.js"></script>
   
+  
+  <%-- 
+  <!-- 로그인 filtering 로직 [old] -->
+  <script src="loginFilter_old.js"></script>
+  --%>
 
 </body>
 

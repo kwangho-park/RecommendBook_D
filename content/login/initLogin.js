@@ -2,5 +2,5 @@
 
 function initLogin(){
   menuInit();
-  loginEventListener();
+//  loginEventListener();
 }
