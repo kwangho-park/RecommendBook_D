@@ -72,7 +72,9 @@
         <h3> 양식</h3>
 
         <label class="joinInfo"> 아 이 디&nbsp; : &nbsp;</label>					<input type = "text" 		name="id"		id="id" 		placeholder="아이디를 입력해줘야겠쥬?">
-        <%--<input type="button" id="idCheckBtn" value="중복확인">  --%>
+        <%--[장기적 고민]
+        <input type="button" id="idCheckBtn" value="중복확인">  
+        --%>
 
         <label class="joinInfo"> 비밀번호 : &nbsp;</label>							<input type = "password" 	name="pw"		id="pw" 		placeholder="잊어버리면 찾을 수가 없슈!">
         <label class="joinInfo"> 이&nbsp; &nbsp; 름&nbsp; : &nbsp;</label>			<input type = "text" 		name="name"		id="name" 		placeholder="이름이 뭐쥬?">
@@ -141,12 +143,16 @@
   <!-- 입력한 회원가입 정보의 유효성 검사 -->
   <script src="joinValidation.js"></script>
   
+<%--
   <!-- session storage에 저장하는 로직 -->
-  <script src="saveInfo.js"></script>
-  
+  <script src="saveInfo_old.js"></script>
+   
+
   <!-- id 중복여부를 확인하는 로직 -->
-  <%-- [장기적 고민] 하나의 form에 2개의 submit처리방법은??--%>
-  <script src="idFilter.js"></script>
+  <!-- [장기적 고민] 하나의 form에 2개의 submit처리방법은??--!>
+  <script src="idFilter_old.js"></script>
+--%>
+  
   
 <body>
 
