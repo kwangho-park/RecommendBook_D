@@ -18,7 +18,7 @@
 
 
 <%@ page contentType="text/html; charset=UTF-8"%>
-
+<%@ page import="java.io.PrintWriter" %>
 <jsp:useBean id="postInfoDB" class="clientInfo.PostInfoDB" scope="session"/>
 
 
@@ -32,11 +32,6 @@
 </head>
 <body>
 	SESSION scope에 데이터를 저장하자! <br>
-	
-	<%--
-	입력한 도서명 : ${param.bookName} <br>
-	입력한 작가명 : ${param.writer}<br>
- 	--%>
 
 	<%
 		String bookName = request.getParameter("bookName");
@@ -48,15 +43,32 @@
 		String level	= request.getParameter("level");	
 		String score	= request.getParameter("score");
 		
+		// 다이얼로그 출력용 객체
+		// [확인 필요] : 어떻게 동작하는지 확인이 필요한 녀석 (구글링한 소스)
+		PrintWriter write = response.getWriter();
+		
 		if(postInfoDB.isEmpty()){		// 배열의 저장공간을 확인
 			
 			postInfoDB.setAll(bookName,writer,title,content,bookType,favorite,level,score);	
-			// 저장완료 다이얼로그 창 출력
-			// post page로 redirection 필요
+		
+			// [확인 필요] : 어떻게 동작하는지 확인이 필요한 녀석 (구글링한 소스)
+			write.println("<script>location.href='/RecommendBook_D/content/recommendBook/recommendBook.jsp'</script>");			
+			write.println("<script>alert('게시글이 등록되었습니다^^.')</script>");		
+			write.flush();
+			
+			// 도서추천 페이지로 이동
+			//response.sendRedirect("/RecommendBook_D/content/recommendBook/recommendBook.jsp");
 			
 		}else{
-			out.println("저장공간이 부족합니다");		// 다이얼로그 창으로 변경	
-			// post page로 redirection 필요
+
+			write.println("<script>alert('저장공간이 존재하지않습니다.')</script>");		
+			write.println("<script>location.href='/RecommendBook_D/content/post/post.jsp'</script>");	
+			write.flush();		
+			
+			// 게시글 입력 페이지로 이동
+			//response.sendRedirect("/RecommendBook_D/content/post/post.jsp");
+	
+			
 		}
 	%>
 
