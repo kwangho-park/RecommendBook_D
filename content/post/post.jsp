@@ -111,10 +111,7 @@
  
   <!-- web page loading 시 초기화 로직 -->
   <script src="initPost.js"></script>
-
-  <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
-  <script src="/RecommendBook_D/content/common/menuPanel.js"></script> 
- 
+W
  
 <%--
   데이터 저장방식 변경으로 미사용 (session storage -> SESSION scope)

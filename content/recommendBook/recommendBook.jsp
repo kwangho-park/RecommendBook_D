@@ -58,7 +58,7 @@
 		<thead>
 			<tr><th>순위</th><th>도 서 명</th><th>작 가 명</th><th>추천 점수</th><th>제 목</th></tr>
 		</thead>
-		
+			
 		<tbody>
 			<tr><td>6</td><td id="bookName6"></td><td id="writer6"></td><td id="score6"></td><td id="title6"></td></tr>
 			<tr><td>7</td><td id="bookName7"></td><td id="writer7"></td><td id="score7"></td><td id="title7"></td></tr>
@@ -98,9 +98,7 @@
   <!-- web page loading 시 초기화 로직 -->
   <script src="initSearchBook.js"></script>
 	
-  <!-- munuPanel의 동적 CSS -->
-  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>  
-  
+
   <!-- 게시글을 업데이트하는 로직 -->
   <script src="printPost.js"></script>
 

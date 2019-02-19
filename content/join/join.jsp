@@ -136,10 +136,7 @@
 
   <!-- web page loading 시 초기화 로직 -->
   <script src="initJoin.js"></script>
-  
-  <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
-  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>  
-  
+
   <!-- 입력한 회원가입 정보의 유효성 검사 -->
   <script src="joinValidation.js"></script>
   

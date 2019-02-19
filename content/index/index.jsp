@@ -88,18 +88,10 @@
   <footer> 
     저작권 : recommend book web site는 <mark>박광호(웹 프로그래머)에게 저작권</mark>이 있습니다
   </footer>
-  
-  
-  
+
   
   <!-- web page loading 시 초기화 로직 -->
   <script src="initIndex.js"></script>
   
-  <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
-
-  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>
-
-
 </body>
-
 </html>

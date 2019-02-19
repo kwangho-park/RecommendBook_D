@@ -6,7 +6,6 @@
 
 
 <%
-
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	
@@ -22,6 +21,4 @@
 		out.println("<script>alert('아이디 또는 비밀번호가 일치하지 않습니다')</script>");
 		out.println("<script>window.location.href='login.jsp'</script>");
 	}
-	
-	
 %>

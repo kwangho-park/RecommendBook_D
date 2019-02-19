@@ -1,22 +1,3 @@
-<%--
-	1. [ok] 유효성 검사 로직 수정
-		- session storage -> SESSION scope (server) 
-	
-	2. [ok] java bean 클래스의 정의
-		- PostInfo class 
-		
-	3. [ok] client로부터 전달받은 파라미터를 session scope의 배열에 저장
-		- 배열에 저장 전 잔여 공간 확인필요
-		
-	4. [ok] 배열에 데이터를 저장 후 다이얼로그 출력
-		
-	5. 저장 후 page 전환
-		  
-	6. [추후] script tag -> JSTL tag으로 변환
-		  
- --%>
-
-
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
 <jsp:useBean id="postInfoDB" class="clientInfo.PostInfoDB" scope="session"/>
@@ -49,6 +30,7 @@
 		
 		if(postInfoDB.isEmpty()){		// 배열의 저장공간을 확인
 			
+			// SESSION(server side) 에 게시글정보 저장 
 			postInfoDB.setAll(bookName,writer,title,content,bookType,favorite,level,score);	
 		
 			// [확인 필요] : 어떻게 동작하는지 확인이 필요한 녀석 (구글링한 소스)

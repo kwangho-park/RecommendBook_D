@@ -48,12 +48,7 @@
 
 
 	<article>
-		<%--
-		유효성 검사완료 후 로그인완료 페이지로 전환 (로그아웃 시 까지 유지해야함)
-		javascript 으로 쿠키에 로그인 flag 저장 예정
- 		--%>
- 		
-		<%-- test 중 --%> 		
+		
  		<form name = "loginClient" method = "post" action="loginFilter.jsp" onsubmit= "return login()">
  
     	<label class="loginInfo"> ID </label><input type = "text" 		name="id" id = "id" placeholder="문자입력">
@@ -86,9 +81,6 @@
 
   <!-- web page loading 시 초기화 로직 -->
   <script src="initLogin.js"></script>
-  
-  <!-- menuPanel CSS의 동적인 동작을 위한 로직 -->
-  <script src="/RecommendBook_D/content/common/menuPanel.js"></script>
   
   <!-- 로그인 유효성 검사 로직  --> 
   <script src="loginValidation.js"></script>
