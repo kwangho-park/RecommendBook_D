@@ -1,14 +1,8 @@
-<!-- page directive -->
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.Calendar" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
+
+<jsp:useBean id="cal" class="etc.IndexCalendar" scope="page"/>
 
 <!DOCTYPE html>
-
-<!-- script let -->
-<!-- 클라이언트가 요청 시점에서의 날짜를 반환하는 객체 -->
-<%
-	Calendar cal = Calendar.getInstance();
-%>
 
 <html>
 
@@ -41,8 +35,8 @@
 
   
   <nav>
-  		<!-- menu panel -->  
-		<%@ include file="/content/common/menuPanel.jspf"%>
+  	<!-- menu panel -->  
+	<%@ include file="/content/common/menuPanel.jspf"%>
   </nav>
 
   </div>
@@ -52,12 +46,12 @@
     
     <article>
 	<span>  
-		<!-- 표현식 -->
-		접속 일자는 
-		<%=cal.get(Calendar.YEAR) %> 년
-		<%=cal.get(Calendar.MONTH)+1 %> 월
-		<%=cal.get(Calendar.DATE) %> 일
-		입니다
+		접속 일자는
+		${cal.year}년 ${cal.month}월 ${cal.date}일
+		${cal.hour}시 ${cal.minute }분
+		입니다.
+		
+
 	</span>
 
     <!-- 인사말 및 회원가입 link -->
@@ -68,7 +62,6 @@
  
  
     <!-- home page 메인 이미지 -->
-
     <img class = "HomeImg" src="/RecommendBook_D/content/reference/img/book-sea(free_commercial).jpg" width= "1000px" height = "500px">
 
 
