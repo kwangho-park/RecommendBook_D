@@ -33,23 +33,19 @@
   	<h1> Recommend book web site </h1>
   </header>
 
-  <!-- menu panel -->
+
   <nav>
-  		<!-- menu panel -->  
-		<%@ include file="/content/common/menuPanel.jspf"%>
+  	<!-- menu panel -->  
+	<%@ include file="/content/common/menuPanel.jspf"%>
   </nav>
   
   </div>
 
-  
-  
-  
 
   <section>
   
     <h2> 회원가입 </h2>
-  
-    <!-- 회원가입 절차 order list -->
+
     <article>
       <h3> 절차 </h3>
  
