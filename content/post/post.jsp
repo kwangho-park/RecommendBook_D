@@ -44,14 +44,14 @@
 
 	<h2>글쓰기</h2>
 	
-		<form name = "postClient"  action="savePosting.jsp" method="post" onsubmit="return postValidation()">
+		<form name="postClient"  action="savePosting.jsp" method="post" onsubmit="return postValidation()">
 	
 		<div class="postInfo"><label>도서명 : </label><input type="text" name="bookName" id="bookName"></div><br>
 		<div class="postInfo"><label>작가명 : </label><input type="text" name="writer" id="writer"></div><br>
 	
-		<div class="postInfo"><input type="text" name="title" id="title" placeholder="제목을 작성해주세요" style="width:720px"></div><br>
+		<div class="postInfo"><input type="text" name="title" id="title" placeholder="제목을 작성해주세요" style="width:600px"></div><br>
 	
-		<div class="postInfo"><textarea name="content" id="content" cols="100" rows="10" placeholder="이곳에 게시글을 작성해주세요 ~ ㅇㅅㅇ "></textarea></div>
+		<div class="postInfo"><textarea name="content" id="content" cols="100" rows="10" placeholder="이곳에 게시글을 작성해주세요 ~ "></textarea></div>
 		
 		<hr>
 
@@ -111,7 +111,7 @@
  
   <!-- web page loading 시 초기화 로직 -->
   <script src="initPost.js"></script>
-W
+
  
 <%--
   데이터 저장방식 변경으로 미사용 (session storage -> SESSION scope)

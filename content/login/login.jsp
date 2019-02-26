@@ -51,10 +51,10 @@
 		
  		<form name = "loginClient" method = "post" action="loginFilter.jsp" onsubmit= "return login()">
  
-    	<label class="loginInfo"> ID </label><input type = "text" 		name="id" id = "id" placeholder="문자입력">
-    	<label class="loginInfo"> PW </label><input type = "password"	name="pw" id = "pw" placeholder="숫자입력">
-
-	   	<div align="center"><input type="submit" id="loginBtn" value="로그인"></div>
+    	<label class="loginInfo"> ID </label><input type = "text" 		name="loginId" id = "id" placeholder="문자입력">
+    	<label class="loginInfo"> PW </label><input type = "password"	name="loginPw" id = "pw" placeholder="숫자입력">
+    	
+	   	<div align="center"><input type="submit" value="로그인"></div>
     
 		</form>
 	</article>

@@ -3,7 +3,7 @@
 
 
 <span class="menuPanel" id="mouseOver"><a href="/RecommendBook_D/content/index/index.jsp" target="_self">					홈 페이지</a></span>
-<span class="menuPanel" id="mouseOver"><a href="/RecommendBook_D/content/join/join.jsp" target="_self">						회원가입</a></span>
+<span class="menuPanel" id="mouseOver"><a href="/RecommendBook_D/content/signUp/signUp.jsp" target="_self">						회원가입</a></span>
 <span class="menuPanel" id="mouseOver"><a href="/RecommendBook_D/content/login/login.jsp" target="_self">					로그인</a></span>
 <span class="menuPanel" id="mouseOver"><a href="/RecommendBook_D/content/recommendBook/recommendBook.jsp" target="_self">	추천도서 검색</a></span>
 <span class="menuPanel" id="mouseOver"><a href="/RecommendBook_D/content/post/post.jsp" target="_self">						게시글 작성</a></span>
