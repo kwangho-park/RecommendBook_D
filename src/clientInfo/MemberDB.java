@@ -1,23 +1,23 @@
 package clientInfo;
 
-// = ÀÓ½Ã DAO + DBÀÇ ¿ªÈ°ÀÇ Å¬·¡½º
+//= ì„ì‹œ DAO + DBì˜ ì—­í™œì˜ í´ë˜ìŠ¤
 public class MemberDB {
 
 	// id, pw, name, email, address = String
 	
-	// element 5°³ ´ÜÀ§·Î µ¿ÀÏÇÑ È¸¿øÀÇ Á¤º¸
-	private String[] memberArr = new String[20];		// È¸¿øÀº 4¸í¸¸ °¡ÀÔ¹ŞÀ½ (ÀÓ½Ã)
+	// element 5ê°œ ë‹¨ìœ„ë¡œ ë™ì¼í•œ íšŒì›ì˜ ì •ë³´
+	private String[] memberArr = new String[20];		// íšŒì›ì€ 4ëª…ë§Œ ê°€ì…ë°›ìŒ (ì„ì‹œ)
 	private int startNum = 0;
-	private int memberNum = 0;							// È¸¿ø¹øÈ£
+	private int memberNum = 0;							// íšŒì›ë²ˆí˜¸
 
-	// È¸¿ø°¡ÀÔ ½Ã ¹ß»ıÇÏ´Â parameter¸¦ Àü´Ş¹Ş±âÀ§ÇÑ ¿ëµµ
+	// íšŒì›ê°€ì… ì‹œ ë°œìƒí•˜ëŠ” parameterë¥¼ ì „ë‹¬ë°›ê¸°ìœ„í•œ ìš©ë„
 	private String signUpId = "";
 	private String signUpPw = "";
 	private String signUpName = "";
 	private String signUpEmail = "";
 	private String signUpAddress = "";
 	
-	// ·Î±×ÀÎ ½Ã ¹ß»ıÇÏ´Â parameter¸¦ Àü´Ş¹Ş±âÀ§ÇÑ ¿ëµµ
+	// ë¡œê·¸ì¸ ì‹œ ë°œìƒí•˜ëŠ” parameterë¥¼ ì „ë‹¬ë°›ê¸°ìœ„í•œ ìš©ë„
 	private String loginId = "";
 	private String loginPw = "";
 	
@@ -26,7 +26,7 @@ public class MemberDB {
 	public int getMemberNum() { return this.memberNum;	}
 	
 	
-	// instance methodÀÇ Àü´ŞÀÎÀÚ¸¦ ´ëÃ¼ÇÏ±â À§ÇÑ (ÀÓ½Ã) getter, setter //
+	// instance methodì˜ ì „ë‹¬ì¸ìë¥¼ ëŒ€ì²´í•˜ê¸° ìœ„í•œ (ì„ì‹œ) getter, setter //
 	public String getsignUpId() { return this.signUpId;	}
 	public void setsignUpId(String signUpId) {	this.signUpId =signUpId;	}
 	
@@ -52,12 +52,12 @@ public class MemberDB {
 
 	
 
-	// ¹è¿­ elementÀÇ full check //
+	// ë°°ì—´ elementì˜ full check //
 	public boolean isFull() {
 		
 		boolean result = false;
 		
-		if(this.memberArr[15] != null) {			// 4¹øÂ° ÀÔ·ÂµÈ id°ªÀ¸·Î ÇÊÅÍ¸µ
+		if(this.memberArr[15] != null) {			// 4ë²ˆì§¸ ì…ë ¥ëœ idê°’ìœ¼ë¡œ í•„í„°ë§
 			result = true;
 		}
 		
@@ -66,15 +66,15 @@ public class MemberDB {
 
 
 	
-	// idÁßº¹ È®ÀÎ¿ë method //
-	// Áßº¹µÇ´Â id°¡ ¹è¿­¿¡ Á¸Àç ÇÒ °æ¿ì false ¹İÈ¯
+	// idì¤‘ë³µ í™•ì¸ìš© method //
+	// ì¤‘ë³µë˜ëŠ” idê°€ ë°°ì—´ì— ì¡´ì¬ í•  ê²½ìš° false ë°˜í™˜
 	public boolean idFilter() {
 
 		boolean result = true;
 
 		for(int index=0 ; index<20 ; index+=5) {
 
-			if(this.signUpId.equals(this.memberArr[index])) {		// id ÀúÀåÇÏ´Â element index : 0,5,10,15 
+			if(this.signUpId.equals(this.memberArr[index])) {		// id ì €ì¥í•˜ëŠ” element index : 0,5,10,15 
 				result = false;
 			}
 		}
@@ -83,8 +83,8 @@ public class MemberDB {
 	} // idFilter() END
 	
 
-	// È¸¿øÁ¤º¸¸¦ ÀúÀåÇÏ´Â method // 
-	// jsp action tag·Î ³Ñ°Ü¹ŞÀº Á¤º¸¸¦ setting
+	// íšŒì›ì •ë³´ë¥¼ ì €ì¥í•˜ëŠ” method // 
+	// jsp action tagë¡œ ë„˜ê²¨ë°›ì€ ì •ë³´ë¥¼ setting
 	public void setMemberArr() {
 		this.memberArr[this.startNum] = this.signUpId;	
 		this.memberArr[this.startNum+1] = this.signUpPw;
@@ -100,14 +100,14 @@ public class MemberDB {
 	
 
 	
-	// ·Î±×ÀÎ ÇÊÅÍ¸µÀ» À§ÇÑ id,pw ºñ±³ ¸Ş¼Òµå // 
+	// ë¡œê·¸ì¸ í•„í„°ë§ì„ ìœ„í•œ id,pw ë¹„êµ ë©”ì†Œë“œ // 
 	public boolean loginFilter() {
 
 		boolean result = false;
 
 		for(int index=0 ; index<4 ; index++) {
 
-			if(this.loginId.equals(this.memberArr[index*5])) {		// id ÀúÀåÇÏ´Â element index : 0,5,10,15
+			if(this.loginId.equals(this.memberArr[index*5])) {		// id ì €ì¥í•˜ëŠ” element index : 0,5,10,15
 				
 				if(this.loginPw.equals(this.memberArr[index*5+1])) {
 					result = true;	

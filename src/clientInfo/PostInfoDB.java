@@ -1,6 +1,6 @@
 /*
- * (ÀÓ½Ã) data base
- * PostInfoDB ÀÇ instance memeber array (¿ä¼Ò 8ea, max 5°³ÀÇ °Ô½Ã±Û)
+ * (ìž„ì‹œ) data base
+ * PostInfoDB ì˜ instance memeber array (ìš”ì†Œ 8ea, max 5ê°œì˜ ê²Œì‹œê¸€)
  * 
  * */
 
@@ -9,17 +9,17 @@ package clientInfo;
 public class PostInfoDB {
 	
 	private String[] postInfoArr = new String[40];
-	private int countArr = 1;							// ¹è¿­(=°Ô½Ã±Û) Æ÷È­¿©ºÎ¸¦ È®ÀÎÇÏ±âÀ§ÇÑ flag (max 5)
-	private int startIndex = 0;							// ¹è¿­ÀÇ ½ÃÀÛ¹øÈ£ (DBÀÇ primary key)
+	private int countArr = 1;							// ë°°ì—´(=ê²Œì‹œê¸€) í¬í™”ì—¬ë¶€ë¥¼ í™•ì¸í•˜ê¸°ìœ„í•œ flag (max 5)
+	private int startIndex = 0;							// ë°°ì—´ì˜ ì‹œìž‘ë²ˆí˜¸ (DBì˜ primary key)
 	
 	
-	// ¹è¿­ÀÇ ÁÖ¼Ò¸¦ ¹ÝÈ¯ (test¿ë) //
+	// ë°°ì—´ì˜ ì£¼ì†Œë¥¼ ë°˜í™˜ (testìš©) //
 	public String[] getArr() {
 		return this.postInfoArr;
 	} // getArr() END
 	
 	
-	// ¹è¿­ÀÇ ÀüÃ¼ ¿ä¼Ò¸¦ ¼ÂÆÃ //
+	// ë°°ì—´ì˜ ì „ì²´ ìš”ì†Œë¥¼ ì…‹íŒ… //
 	public void setAll(String bookName, String writer, String title, String content, String bookType, String favorite, String level, String score) {
 		
 		this.postInfoArr[startIndex]   = bookName;
@@ -31,18 +31,18 @@ public class PostInfoDB {
 		this.postInfoArr[startIndex+6] = level;
 		this.postInfoArr[startIndex+7] = score;	
 		
-		this.startIndex += 8;			// ½ÃÀÛ ÀÎµ¦½º Áõ°¡
+		this.startIndex += 8;			// ì‹œìž‘ ì¸ë±ìŠ¤ ì¦ê°€
 		
 	} // setAll() END
 	
 	
-	// ¹è¿­¿¡ ÀúÀå°¡´ÉÇÑ °ø°£À» È®ÀÎ(=°Ô½Ã±Û) //
-	// ÀúÀå°¡´É : true , ÀúÀåºÒ°¡ : false
+	// ë°°ì—´ì— ì €ìž¥ê°€ëŠ¥í•œ ê³µê°„ì„ í™•ì¸(=ê²Œì‹œê¸€) //
+	// ì €ìž¥ê°€ëŠ¥ : true , ì €ìž¥ë¶ˆê°€ : false
 	public boolean isEmpty() {
 		
 		boolean result = false;
 		
-		if(countArr>=1 && countArr<=5) {		// ÀúÀå°¡´É
+		if(countArr>=1 && countArr<=5) {		// ì €ìž¥ê°€ëŠ¥
 			this.countArr += 1;
 			result = true;
 		}
